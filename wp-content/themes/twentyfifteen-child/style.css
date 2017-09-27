@@ -1,0 +1,368 @@
+/*
+Theme Name: LD Marketing Calendar
+Description: Child theme for Twentyfifteen theme
+Author: Craig the Boren Identity
+Template: twentyfifteen
+*/
+
+/* write custom css */
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-weight: 200;
+    font-style: normal;
+    font-stretch: normal;
+    src: local('SourceSansPro-ExtraLight'), local('Source Sans Pro'), url(/common/fonts/source-sans-pro/EOT/SourceSansPro-ExtraLight.eot) format('embedded-opentype'), url(/common/fonts/source-sans-pro/WOFF/OTF/SourceSansPro-ExtraLight.otf.woff) format('woff'), url(/common/fonts/source-sans-pro/OTF/SourceSansPro-ExtraLight.otf) format('opentype'), url(/common/fonts/source-sans-pro/TTF/SourceSansPro-ExtraLight.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-weight: 200;
+    font-style: italic;
+    font-stretch: normal;
+    src: local('SourceSansPro-ExtraLightIt'), local('Source Sans Pro'), url(/common/fonts/source-sans-pro/EOT/SourceSansPro-ExtraLightIt.eot) format('embedded-opentype'), url(/common/fonts/source-sans-pro/WOFF/OTF/SourceSansPro-ExtraLightIt.otf.woff) format('woff'), url(/common/fonts/source-sans-pro/OTF/SourceSansPro-ExtraLightIt.otf) format('opentype'), url(/common/fonts/source-sans-pro/TTF/SourceSansPro-ExtraLightIt.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    src: local('SourceSansPro-Light'), local('Source Sans Pro'), url(/common/fonts/source-sans-pro/EOT/SourceSansPro-Light.eot) format('embedded-opentype'), url(/common/fonts/source-sans-pro/WOFF/OTF/SourceSansPro-Light.otf.woff) format('woff'), url(/common/fonts/source-sans-pro/OTF/SourceSansPro-Light.otf) format('opentype'), url(/common/fonts/source-sans-pro/TTF/SourceSansPro-Light.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-weight: 300;
+    font-style: italic;
+    font-stretch: normal;
+    src: local('SourceSansPro-LightIt'), local('Source Sans Pro'), url(/common/fonts/source-sans-pro/EOT/SourceSansPro-LightIt.eot) format('embedded-opentype'), url(/common/fonts/source-sans-pro/WOFF/OTF/SourceSansPro-LightIt.otf.woff) format('woff'), url(/common/fonts/source-sans-pro/OTF/SourceSansPro-LightIt.otf) format('opentype'), url(/common/fonts/source-sans-pro/TTF/SourceSansPro-LightIt.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    src: local('SourceSansPro-Regular'), local('Source Sans Pro'), url(/common/fonts/source-sans-pro/EOT/SourceSansPro-Regular.eot) format('embedded-opentype'), url(/common/fonts/source-sans-pro/WOFF/OTF/SourceSansPro-Regular.otf.woff) format('woff'), url(/common/fonts/source-sans-pro/OTF/SourceSansPro-Regular.otf) format('opentype'), url(/common/fonts/source-sans-pro/TTF/SourceSansPro-Regular.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-weight: 400;
+    font-style: italic;
+    font-stretch: normal;
+    src: local('SourceSansPro-Italic'), local('Source Sans Pro'), url(/common/fonts/source-sans-pro/EOT/SourceSansPro-Italic.eot) format('embedded-opentype'), url(/common/fonts/source-sans-pro/WOFF/OTF/SourceSansPro-It.otf.woff) format('woff'), url(/common/fonts/source-sans-pro/OTF/SourceSansPro-It.otf) format('opentype'), url(/common/fonts/source-sans-pro/TTF/SourceSansPro-It.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    src: local('SourceSansPro-Semibold'), local('Source Sans Pro Semibold'), url(/common/fonts/source-sans-pro/EOT/SourceSansPro-Semibold.eot) format('embedded-opentype'), url(/common/fonts/source-sans-pro/WOFF/OTF/SourceSansPro-Semibold.otf.woff) format('woff'), url(/common/fonts/source-sans-pro/OTF/SourceSansPro-Semibold.otf) format('opentype'), url(/common/fonts/source-sans-pro/TTF/SourceSansPro-Semibold.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-weight: 600;
+    font-style: italic;
+    font-stretch: normal;
+    src: local('SourceSansPro-SemiboldIt'), local('Source Sans Pro'), url(/common/fonts/source-sans-pro/EOT/SourceSansPro-SemiboldIt.eot) format('embedded-opentype'), url(/common/fonts/source-sans-pro/WOFF/OTF/SourceSansPro-SemiboldIt.otf.woff) format('woff'), url(/common/fonts/source-sans-pro/OTF/SourceSansPro-SemiboldIt.otf) format('opentype'), url(/common/fonts/source-sans-pro/TTF/SourceSansPro-SemiboldIt.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    src: local('SourceSansPro-Bold'), local('Source Sans Pro Bold'), url(/common/fonts/source-sans-pro/EOT/SourceSansPro-Bold.eot) format('embedded-opentype'), url(/common/fonts/source-sans-pro/WOFF/OTF/SourceSansPro-Bold.otf.woff) format('woff'), url(/common/fonts/source-sans-pro/OTF/SourceSansPro-Bold.otf) format('opentype'), url(/common/fonts/source-sans-pro/TTF/SourceSansPro-Bold.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-weight: 700;
+    font-style: italic;
+    font-stretch: normal;
+    src: local('SourceSansPro-BoldIt'), local('Source Sans Pro'), url(/common/fonts/source-sans-pro/EOT/SourceSansPro-BoldIt.eot) format('embedded-opentype'), url(/common/fonts/source-sans-pro/WOFF/OTF/SourceSansPro-BoldIt.otf.woff) format('woff'), url(/common/fonts/source-sans-pro/OTF/SourceSansPro-BoldIt.otf) format('opentype'), url(/common/fonts/source-sans-pro/TTF/SourceSansPro-BoldIt.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-weight: 900;
+    font-style: normal;
+    font-stretch: normal;
+    src: local('SourceSansPro-Black'), local('Source Sans Pro Black'), url(/common/fonts/source-sans-pro/EOT/SourceSansPro-Black.eot) format('embedded-opentype'), url(/common/fonts/source-sans-pro/WOFF/OTF/SourceSansPro-Black.otf.woff) format('woff'), url(/common/fonts/source-sans-pro/OTF/SourceSansPro-Black.otf) format('opentype'), url(/common/fonts/source-sans-pro/TTF/SourceSansPro-Black.ttf) format('truetype')
+}
+
+@font-face {
+    font-family: 'Source Sans Pro';
+    font-weight: 900;
+    font-style: italic;
+    font-stretch: normal;
+    src: local('SourceSansPro-BlackIt'), local('Source Sans Pro'), url(/common/fonts/source-sans-pro/EOT/SourceSansPro-BlackIt.eot) format('embedded-opentype'), url(/common/fonts/source-sans-pro/WOFF/OTF/SourceSansPro-BlackIt.otf.woff) format('woff'), url(/common/fonts/source-sans-pro/OTF/SourceSansPro-BlackIt.otf) format('opentype'), url(/common/fonts/source-sans-pro/TTF/SourceSansPro-BlackIt.ttf) format('truetype')
+}
+
+body, html {
+    height: 100%;
+}
+
+.content-area {
+	height: 100%;
+}
+
+.single-calendar .content-area {
+	border: 2px solid #999999;
+	overflow: hidden;
+}
+
+iframe.calendar {
+/*	margin: 0px 10px 20px 5px;*/
+	float: left;
+	overflow: hidden;
+	border-bottom:2px solid #999999;
+}
+iframe.calendar-even {
+/*	margin: 0px 0px 20px 0px;*/
+	float: left;
+	overflow: hidden;
+	border-bottom:2px solid #999999;
+}
+
+h2 {
+	font-family: "source sans pro";
+}
+
+.post-navigation {
+	display: none;
+}
+
+
+/**
+ * Calendar styles
+ */
+
+.calendars {
+	height: 100%;
+}
+
+.simcal-day div:first-child { /* Craig */
+	min-height: 180px!important;
+}
+
+span.simcal-current-month {
+    font-size: 24px;
+}
+span.simcal-current-year {
+    font-size: 24px;
+}
+span.simcal-event-title {
+    font-size: 13px;
+	/* line-height: 13px; */
+    display: block;
+}
+span.simcal-event-start.simcal-event-start-time {
+    font-size: 13px;
+	float: left;
+	padding: 0 0 0 2px;
+}
+/*span.simcal-event-start.simcal-event-start-time:after {  Craig
+	content: '\002D ' ;
+}*/
+th.simcal-week-day {
+    font-size: 14px;
+}
+span.simcal-day-label {
+    font-size: 15px;
+}
+
+th.simcal-week-day-0 {
+	width: 10px;
+}
+th.simcal-week-day-6 {
+	width: 10px;
+}
+tr.simcal-week:first-child {
+	width: 10px;
+}
+tr.simcal-week:last-child {
+	width: 10px;
+}
+
+.simcal-calendar {
+    position: relative;
+    margin: 10px;
+    border: 1px solid #cccccc;
+}
+
+.simcal-default-calendar-grid .simcal-events>.simcal-event {
+    margin: 0px !important;
+    padding: 0px 4px 4px 0px !important
+}
+
+.hentry {
+	background-color: #fff;
+	padding-top: 0%;
+	position: relative;
+}
+
+.site-main {
+	padding: 0%;
+}
+
+.hentry,
+.page-header,
+.page-content {
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+	/*margin: 0 7.6923%; cboren*/
+}
+
+@media screen and (min-width: 38.75em) {
+
+	.site-main {
+		padding: 0%;
+	}
+
+	.hentry,
+	.page-header,
+	.page-content {
+		box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+		/*margin: 0 7.6923%; cboren*/
+	}
+
+	.entry-header {
+		padding: 0%;
+	}
+
+	.entry-content,
+	.entry-summary {
+		padding: 0%;
+	}
+}
+
+@media screen and (min-width: 55em) {
+
+	.entry-title,
+	.widecolumn h2 {
+		font-size: 26px;
+		/* font-size: 3.9rem; */
+		line-height: 1.2308;
+		margin-bottom: 3px;
+	}
+
+}
+
+@media screen and (min-width: 59.6875em) {
+
+	.site {
+		margin: 0;
+		max-width: 100%;
+		height: 100%;
+	}
+
+	.site-main {
+		padding: 0%;
+		height: 100%;
+	}
+
+	.hentry,
+	.page-header,
+	.page-content {
+		margin: 0;
+	}
+
+	.hentry {
+		padding-top: 0%;
+		height: 100%;
+	}
+
+	.hentry + .hentry,
+	.page-header + .hentry,
+	.page-header + .page-content {
+		margin-top: 0;
+	}
+
+	.entry-header {
+		padding: 0%;
+	}
+
+	.entry-content,
+	.entry-summary {
+		padding: 0 0; /* cboren */
+		height: 100%;
+	}
+
+}
+
+@media screen and (min-width: 77.5em) {
+	.entry-title,
+	.widecolumn h2 {
+		font-size: 39px;
+		font-size: 2.9rem;
+		line-height: 1.2308;
+		margin-bottom: 0px;
+		display: none;
+	}
+}
+
+.simcal-fullcalendar-grid .fc table, .simcal-fullcalendar-grid .fc-widget-header table {
+    margin: 0;
+}
+
+.fc-header-view {
+    position: relative;
+    z-index: 1;
+    width: 1785px;
+    border-left: 2px solid #999999;
+    border-right: 2px solid #999999;
+    border-top: 2px solid #999999;
+    margin: 0px;
+    overflow: hidden;
+	margin: 0 auto;
+}
+
+.fc-header-view td, .fc-header-view th {
+    border: none !important;
+    padding: 0;
+    vertical-align: top;
+	border-width: 0px !important;
+}
+
+.fc-unthemed .fc-content, .fc-unthemed .fc-divider, .fc-unthemed .fc-popover, .fc-unthemed .fc-row, .fc-unthemed tbody, .fc-unthemed td, .fc-unthemed th, .fc-unthemed thead {
+    border-color: #ddd;
+}
+
+.fc th {
+    font-weight: 400;
+    font-size: 1.3em;
+}
+
+.fc-head th, .fc-head td {
+    padding: 0em !important;
+	text-align: center;
+	font-family: "source sans pro";
+}
+
+.fc-title {
+	font-weight: bold;
+}
+
+.fc-header-view table {
+	margin-bottom: 0px !important;
+}
+
+.fc-day-grid-event {
+	color: #000000 !important;
+}
+
+.fc-scroller>.fc-day-grid, .fc-scroller>.fc-time-grid {
+    height: 100%;
+}
+
+.fc-sat, .fc-sun {
+    display: none;
+}
+
+div.fc-content-skeleton tbody tr:first-child td:first-child , div.fc-content-skeleton tbody tr:first-child td:last-child {
+	display: none;
+}

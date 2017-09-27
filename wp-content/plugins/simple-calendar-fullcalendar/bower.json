@@ -1,0 +1,8 @@
+{
+  "name": "simple-calendar-fullcalendar",
+  "license": "GPL-2.0+",
+  "private": true,
+  "devDependencies": {
+    "fullcalendar": "2.x"
+  }
+}
