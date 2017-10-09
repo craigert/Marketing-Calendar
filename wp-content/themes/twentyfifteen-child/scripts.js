@@ -50,16 +50,10 @@
 		});
 
 		// Funtion to determine which week of the month the current date is in
-		function getWeekNo(date) {
-
-            var day = date.getDate();
-
-            //get weekend date
-            day += (date.getDay() == 0 ? 0 : 7 - date.getDay());
-
-            return Math.ceil(parseFloat(day) / 7);
-
-        }
+		Date.prototype.getMonthWeek = function(){
+			var firstDay = new Date(this.getFullYear(), this.getMonth(), 1).getDay();
+			return Math.ceil((this.getDate() + firstDay)/7);
+		}
 
 		var monthNames = ["January", "February", "March", "April", "May", "June",
 		  "July", "August", "September", "October", "November", "December"
@@ -68,8 +62,8 @@
         // Get current date
 		var currentDate = new Date();
 
-        // Get week number based on current date
-		var weekNumber = getWeekNo(currentDate);
+        // Set week number based on current date
+		var weekNumber = currentDate.getMonthWeek();
 
 		// Set month title to current month
 		var month = monthNames[currentDate.getMonth()];
@@ -137,28 +131,39 @@
 			next();
 		});
 		
+		// Fix unicode characters inside event titles
+		setTimeout(function(){
+			 $(".fc-content .fc-title").each(function( index ) {
+				var eventTitle = $(this).text();
+				if (eventTitle.indexOf("&#039;") >= 0) {
+					eventTitle.replace("&#039;","'");
+					$(this).html(eventTitle);
+				}
+				else {}
+			});
+		}, 300);
 		
-		/* TESTING - nothing important */
+		/* TESTING - these aren't the droids you are looking for */
 		
 		//$('div.fc-content-skeleton tbody tr:first-child td:first-child').css('display', 'none');
 		//$('div.fc-content-skeleton tbody tr:first-child td:last-child').css('display', 'none');
 
 		// Array of all events
-		var eventTitleArray = $("li.simcal-event > span.simcal-event-title").map(function() {
-			return this.innerHTML;
-		}).get();
+		//var eventTitleArray = $("li.simcal-event > span.simcal-event-title").map(function() {
+		//	return this.innerHTML;
+		//}).get();
 
-		var i;
+		//var i;
 
-	//	for (i = 0; i < eventTitleArray.length; ++i) {
-	//		// do something with `substr[i]`
-	//	}
-	//
-	//	$('body').append('<pre>'+JSON.stringify(eventTitleArray,  null, ' '))
+		//	for (i = 0; i < eventTitleArray.length; ++i) {
+		//		// do something with `substr[i]`
+		//	}
+		//
+		//	$('body').append('<pre>'+JSON.stringify(eventTitleArray,  null, ' '))
 
-	//	$("#globalCalendar").load(function () {
-	//		frames["globalCalendar"].contentWindow.location.reload(true);
-	//	});
+		//	$("#globalCalendar").load(function () {
+		//		frames["globalCalendar"].contentWindow.location.reload(true);
+		//	});
 
 	} );
 } )( jQuery );
