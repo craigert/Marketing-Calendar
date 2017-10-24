@@ -189,11 +189,6 @@ tr.simcal-week:last-child {
 	width: 10px;
 }
 
-.simcal-default-calendar-grid .simcal-events>.simcal-event {
-    margin: 0px !important;
-    padding: 0px 4px 4px 0px !important
-}
-
 .hentry {
 	background-color: #fff;
 	padding-top: 0%;
@@ -299,8 +294,25 @@ tr.simcal-week:last-child {
 	}
 }
 
+.simcal-fullcalendar-grid {
+	height: 100%;
+}
+
 .simcal-fullcalendar-grid .fc table, .simcal-fullcalendar-grid .fc-widget-header table {
     margin: 0;
+}
+
+.fc {
+	height: 100%;
+}
+
+.fc-view {
+	overflow: inherit !important;
+	height: 100% !important;
+}
+
+.fc-view-container {
+	height: 100%;
 }
 
 .fc-header-view {
@@ -320,6 +332,10 @@ tr.simcal-week:last-child {
     padding: 0;
     vertical-align: top;
 	border-width: 0px !important;
+}
+
+.simcal-fullcalendar-grid .fc table {
+	height: 100%;
 }
 
 .fc-unthemed .fc-content, .fc-unthemed .fc-divider, .fc-unthemed .fc-popover, .fc-unthemed .fc-row, .fc-unthemed tbody, .fc-unthemed td, .fc-unthemed th, .fc-unthemed thead {
@@ -343,6 +359,7 @@ tr.simcal-week:last-child {
 
 .fc-header-view table {
 	margin-bottom: 0px !important;
+	margin-bottom: 0px !important;
 }
 
 .fc-day-grid-event {
@@ -359,4 +376,15 @@ tr.simcal-week:last-child {
 
 div.fc-content-skeleton tbody tr:first-child td:first-child , div.fc-content-skeleton tbody tr:first-child td:last-child {
 	display: none;
+}
+
+.fc-day-grid-event .fc-content {
+    white-space: normal !important;
+    overflow: hidden;
+    padding: 2px 0px 2px 5px !important;
+    height: auto !important;
+}
+
+.fc-basic-view td.fc-day-number {
+	font-size: 24px;
 }

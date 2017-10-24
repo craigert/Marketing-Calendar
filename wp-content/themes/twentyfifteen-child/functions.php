@@ -19,7 +19,7 @@ add_action('wp_enqueue_scripts', 'custom_enqueue_styles');
 */
 function custom_enqueue_scripts() {
 
-	wp_register_script('custom_script', get_stylesheet_directory_uri() .'/scripts.js', array('jquery'),'1.1', true);
+	wp_register_script('custom_script', get_stylesheet_directory_uri() . '/scripts.js', false, filemtime( get_stylesheet_directory().'/scripts.js' ), true);
 	wp_enqueue_script('custom_script');
 
 }
